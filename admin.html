@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WWGD – Admin</title>
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+  <main class="wrap">
+    <h1>WWGD – Nachrichten verwalten</h1>
+    <section id="loginPanel" class="panel">
+      <h2>Admin-Anmeldung</h2>
+      <form id="loginForm">
+        <label for="password">Admin-Passwort</label>
+        <input id="password" type="password" autocomplete="current-password" required>
+        <button type="submit">Anmelden</button>
+      </form>
+      <p id="loginStatus" class="status" aria-live="polite"></p>
+    </section>
+
+    <section id="adminPanel" class="panel" hidden>
+      <div class="topline">
+        <h2>Deine Nachrichten</h2>
+        <button id="logoutButton" class="secondary" type="button">Abmelden</button>
+      </div>
+      <form id="addForm" class="add-form">
+        <label for="newText">Neue Nachricht</label>
+        <div class="add-row">
+          <input id="newText" type="text" maxlength="500" required placeholder="Nachricht eingeben">
+          <button type="submit">Hinzufügen</button>
+        </div>
+      </form>
+      <p id="adminStatus" class="status" aria-live="polite"></p>
+      <ul id="messageList" class="message-list"></ul>
+    </section>
+    <p class="back"><a href="/">← Zur öffentlichen Website</a></p>
+  </main>
+  <script src="/admin.js"></script>
+</body>
+</html>

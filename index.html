@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>WWGD</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="page">
+    <button id="messageButton" class="image-button" type="button" aria-label="Zufällige Nachricht anzeigen">
+      <img src="/images/wwgd-button.jpeg" alt="WWGD" onerror="this.style.display='none';this.nextElementSibling.hidden=false">
+      <span class="image-fallback" hidden>WWGD</span>
+    </button>
+    <p id="message" class="message" aria-live="polite"></p>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
